@@ -75,10 +75,22 @@ python main.py profit -min 01012000 -max 01013000
 Following argument is mandatory to shift the time:
 1. Days: -d or --days
 
+Examples:
 ```
 python main.py advance-time -d 2
 python main.py advance-time -d 200
 python main.py advance-time -d 2000
+```
+
+### Set-date
+
+Following argument is mandatory to set the date:
+1. Date: -dt or --date
+
+Examples:
+```
+python main.py set-date -dt 01012024
+python main.py set-date -dt 01013000 (Be carefull, it can be that all your items will be expired after filling in this example!)
 ```
 
 ### Backup

@@ -25,6 +25,9 @@ def main():
         actions.backup()
         actions.advance_time(parser.args.days)
         today.isexpired()
+    elif parser.args.actions == "set-date":
+        today.set_date(parser.args.date)
+        today.isexpired()
     elif parser.args.actions == "backup": # creates backup of instock file.
         actions.backup()
     elif parser.args.actions == "inventory":

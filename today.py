@@ -61,4 +61,12 @@ def isexpired(): #This function deletes products from the stocklist after advanc
             else:
                 writer.writerow(item)
                 counter += 1
+#  python main.py set-date -dt 01012023
 
+def set_date(datum):
+    newdate = datum.date()
+    newdaystr = newdate.strftime("%Y-%m-%d")
+    with open("date.txt", 'w') as file:
+        file.write(newdaystr)
+    panel = Panel(Text(f"New day is: {datum.strftime('%d-%m-%Y')}", justify="center", style="green"), border_style="yellow")
+    print(panel)
